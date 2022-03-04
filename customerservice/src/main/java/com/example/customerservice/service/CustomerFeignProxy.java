@@ -9,11 +9,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 import com.example.customerservice.model.OrdersDto;
 
 
-@FeignClient(name="customer-service", url="http://localhost:8082/")
+@FeignClient(name="order-service", url="http://localhost:8082/")
 public interface CustomerFeignProxy {
 	
 	@GetMapping("customers/cid/{cid}")
-	public List<OrdersDto> findCaddressByCid(@PathVariable int cid);
+	public List<OrdersDto> findCaddressByCid(@PathVariable("cid") int cid);
 
 }
 

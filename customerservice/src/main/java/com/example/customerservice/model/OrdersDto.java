@@ -1,14 +1,12 @@
 package com.example.customerservice.model;
 
 import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
 
 @Entity
-@Table(name="orders")
+
 public class OrdersDto {
 	
-	@Id
+	
 	int oid;
 	
 	int cid;
